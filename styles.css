@@ -1,55 +1,42 @@
-/* ========================================
-   Design System — Variables
-======================================== */
 :root {
-  /* Dark Base — أسود نقي */
+  
   --bg-deep: #000000;
   --bg-primary: #0a0a0a;
   --bg-card: #111111;
   --bg-elevated: #1a1a1a;
   --bg-glass: rgba(17, 17, 17, 0.75);
 
-  /* Borders */
   --border-subtle: rgba(59, 130, 246, 0.15);
   --border-medium: rgba(59, 130, 246, 0.25);
   --border-glow: rgba(59, 130, 246, 0.5);
 
-  /* ===== Brand Palette ===== */
-  /* الذهبي — اللون الأساسي */
   --accent-primary: #3b82f6;
   --accent-primary-d: #3b82f6;
-  /* الذهبي الفاتح */
+  
   --accent-gold: #3b82f6;
   --accent-gold-d: #3b82f6;
-  /* ألوان مساعدة */
+  
   --accent-light: #3b82f6;
   --accent-success: #3b82f6;
   --accent-danger: #f87171;
 
-  /* Glows */
   --glow-gold: rgba(59, 130, 246, 0.4);
   --glow-gold-strong: rgba(59, 130, 246, 0.6);
   --glow-light: rgba(59, 130, 246, 0.3);
 
-  /* Text */
   --text-primary: #ffffff;
   --text-secondary: #d1d1d1;
   --text-muted: #999999;
   --text-dim: #666666;
 
-  /* Typography */
   --font-heading: 'Tajawal', 'Cairo', sans-serif;
   --font-body: 'Cairo', system-ui, sans-serif;
 
-  /* Layout */
   --section-py: 88px;
   --card-radius: 16px;
   --btn-radius: 8px;
 }
 
-/* ========================================
-   Reset & Base
-======================================== */
 *,
 *::before,
 *::after {
@@ -100,14 +87,10 @@ img {
   max-width: 100%;
 }
 
-/* Sections blend into one flow — no alternating backgrounds */
 .bg-light-alt {
   background: #000000;
 }
 
-/* ========================================
-   Scrollbar
-======================================== */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -121,9 +104,6 @@ img {
   border-radius: 999px;
 }
 
-/* ========================================
-   Animated Background Orbs
-======================================== */
 body::before,
 body::after {
   content: '';
@@ -163,9 +143,6 @@ body::after {
   }
 }
 
-/* ========================================
-   Utility Classes
-======================================== */
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
@@ -173,7 +150,6 @@ body::after {
   background-clip: text;
 }
 
-/* لنصوص الإحصائيات في بطاقة المدرب */
 .stat-value-gradient {
   font-family: var(--font-heading);
   font-size: 1.45rem;
@@ -190,9 +166,6 @@ body::after {
   color: var(--text-muted);
 }
 
-/* ========================================
-   Buttons
-======================================== */
 .btn-gradient {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -231,9 +204,6 @@ body::after {
   transform: translateY(0);
 }
 
-/* ========================================
-   Hero Section
-======================================== */
 .hero-section {
   padding-top: 130px;
   padding-bottom: 90px;
@@ -242,7 +212,6 @@ body::after {
   background: #000000;
 }
 
-/* Grid overlay */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -251,7 +220,6 @@ body::after {
   pointer-events: none;
 }
 
-/* ── Discount Badge ── */
 .badge-discount {
   display: inline-flex;
   align-items: center;
@@ -282,7 +250,6 @@ body::after {
   }
 }
 
-/* ── Hero Typography ── */
 .hero-title {
   font-size: clamp(1.9rem, 3.5vw + 1rem, 3.4rem);
   line-height: 1.22;
@@ -301,7 +268,6 @@ body::after {
   color: var(--text-primary);
 }
 
-/* ── Secure Payment ── */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -315,9 +281,6 @@ body::after {
   font-size: 1rem;
 }
 
-/* ========================================
-   Countdown
-======================================== */
 .countdown-wrapper {
   display: inline-flex;
   align-items: center;
@@ -338,7 +301,7 @@ body::after {
 .countdown-item span {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: var(--accent-gold);
   line-height: 1;
@@ -346,24 +309,21 @@ body::after {
 
 .countdown-item small {
   display: block;
-  font-size: 0.67rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 3px;
+  margin-top: 5px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
 
 .countdown-separator {
   font-weight: 900;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: var(--accent-gold);
   align-self: flex-start;
   padding-top: 2px;
 }
 
-/* ========================================
-   Hero Stats
-======================================== */
 .hero-stats .stat-card {
   background: var(--bg-glass);
   border: 1px solid var(--border-subtle);
@@ -407,9 +367,6 @@ body::after {
   display: block;
 }
 
-/* ========================================
-   Video Card
-======================================== */
 .video-card {
   background: var(--bg-card);
   border-radius: var(--card-radius);
@@ -476,7 +433,6 @@ body::after {
   color: var(--text-muted);
 }
 
-/* Video Overlay */
 .video-sound-toggle {
   position: absolute;
   top: 20px;
@@ -509,7 +465,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-
 .video-controls {
   display: flex;
   align-items: center;
@@ -519,7 +474,6 @@ body::after {
   direction: ltr;
 }
 
-/* Fullscreen Overrides - Hero Video */
 .video-wrapper:fullscreen {
   padding: 0;
   display: flex !important;
@@ -609,7 +563,6 @@ body::after {
   transform: scale(0.94);
 }
 
-/* Video Settings Dropdown */
 .vc-btn.dropdown-toggle::after,
 .testimo-fullscreen-btn.dropdown-toggle::after {
   display: none !important;
@@ -647,9 +600,6 @@ body::after {
   direction: ltr;
 }
 
-/* ========================================
-   Social Proof Bar
-======================================== */
 .proof-bar {
   background: transparent;
   border-top: none;
@@ -674,9 +624,6 @@ body::after {
   font-size: 1.1rem;
 }
 
-/* ========================================
-   Section Headings
-======================================== */
 .section-padding {
   padding: var(--section-py) 0;
   background: #000000;
@@ -717,9 +664,6 @@ body::after {
   opacity: 0.5;
 }
 
-/* ========================================
-   Feature Cards (Skills)
-======================================== */
 .feature-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -784,9 +728,6 @@ body::after {
   color: var(--text-muted);
 }
 
-/* ========================================
-   Story / Coach Section
-======================================== */
 .story-body-text {
   color: var(--text-secondary);
   line-height: 1.8;
@@ -827,7 +768,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-/* Coach Card */
 .coach-card {
   padding: 2rem 1.75rem;
   position: relative;
@@ -845,9 +785,6 @@ body::after {
   margin-bottom: 1rem;
 }
 
-/* ========================================
-   Curriculum / Module Cards
-======================================== */
 .module-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -878,7 +815,6 @@ body::after {
   color: var(--text-primary);
 }
 
-/* الأيقونات الملوّنة للوحدات */
 .icon-green {
   color: var(--accent-gold);
 }
@@ -931,9 +867,6 @@ body::after {
   flex-shrink: 0;
 }
 
-/* ========================================
-   Results / Testimonials Slider
-======================================== */
 .results-section {
   background: #000000;
 }
@@ -965,9 +898,6 @@ body::after {
   opacity: 0.8;
 }
 
-/* ========================================
-   Swiper Community Slider Specifics
-======================================== */
 .communitySwiper {
   width: 100%;
   max-width: 1400px;
@@ -996,7 +926,6 @@ body::after {
   transform-style: preserve-3d;
 }
 
-/* الصورة النشطة في المنتصف */
 .communitySwiper .swiper-slide-active {
   opacity: 1 !important;
   z-index: 10 !important;
@@ -1004,7 +933,6 @@ body::after {
   transform: scale(1.15) translateZ(0) rotateY(0deg) !important;
 }
 
-/* الصور على الجوانب - مائلة للداخل */
 .communitySwiper .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.6;
   filter: brightness(0.5);
@@ -1021,7 +949,6 @@ body::after {
   filter: brightness(0.65);
 }
 
-/* تأثير الظل */
 .communitySwiper .result-card {
   transition: all 0.5s ease;
   border-radius: 24px;
@@ -1029,32 +956,9 @@ body::after {
   border: 1px solid var(--border-subtle);
 }
 
-/* Pagination في المنتصف */
 .communitySwiper .swiper-pagination {
   bottom: 20px;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .communitySwiper .swiper-slide {
-    width: 280px;
-    max-width: 280px;
-  }
-
-  .communitySwiper .swiper-slide-active {
-    transform: scale(1.1) translateZ(0) rotateY(0deg) !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .communitySwiper .swiper-slide {
-    width: 240px;
-    max-width: 240px;
-  }
-
-  .communitySwiper .swiper-slide-active {
-    transform: scale(1.05) translateZ(0) rotateY(0deg) !important;
-  }
 }
 
 .result-card-glow {
@@ -1112,8 +1016,6 @@ body::after {
   border-radius: 999px;
 }
 
-/* Dots */
-/* Swiper Custom Indicators */
 .community-indicators {
   display: flex !important;
   justify-content: center;
@@ -1156,9 +1058,6 @@ body::after {
   background-color: var(--accent-gold) !important;
 }
 
-/* ========================================
-   Pricing / Investment Section
-======================================== */
 .investment-section {
   background: #000000;
   position: relative;
@@ -1214,7 +1113,7 @@ body::after {
 
 .price-current {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 900;
   background: linear-gradient(135deg, var(--accent-gold), var(--accent-primary));
   -webkit-background-clip: text;
@@ -1289,9 +1188,6 @@ body::after {
   text-align: center;
 }
 
-/* ========================================
-   New Payment Section (Dark Design)
-======================================= */
 .payment-dark-section {
   background: #0d0e12;
   color: #fff;
@@ -1389,7 +1285,6 @@ body::after {
   font-size: 0.9rem;
 }
 
-/* ── Click-to-copy numbers ── */
 .copyable {
   cursor: pointer;
   display: inline-flex;
@@ -1416,7 +1311,6 @@ body::after {
   opacity: 1;
 }
 
-/* Toast */
 #copy-toast {
   position: fixed;
   bottom: 1.5rem;
@@ -1442,7 +1336,6 @@ body::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-
 
 .payment-guarantee {
   background: #f0fdf4;
@@ -1476,7 +1369,6 @@ body::after {
   unicode-bidi: bidi-override;
 }
 
-/* WhatsApp Button */
 .btn-whatsapp {
   background: var(--accent-gold);
   border: none;
@@ -1498,7 +1390,6 @@ body::after {
   box-shadow: 0 10px 28px var(--glow-gold-strong);
 }
 
-
 .payment-price-display {
   display: flex;
   align-items: baseline;
@@ -1511,9 +1402,6 @@ body::after {
   unicode-bidi: bidi-override;
 }
 
-/* ========================================
-   FAQ / Accordion
-======================================== */
 .accordion-item {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle) !important;
@@ -1556,9 +1444,6 @@ body::after {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* ========================================
-   Final CTA Section
-======================================== */
 .final-cta-section {
   background: #000000;
   position: relative;
@@ -1592,9 +1477,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-/* ========================================
-   Footer
-======================================== */
 .footer {
   background: #000000;
   border-top: 1px solid var(--border-subtle);
@@ -1630,9 +1512,6 @@ body::after {
   color: var(--text-dim);
 }
 
-/* ========================================
-   Animations — Entrance
-======================================== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -1666,7 +1545,6 @@ body::after {
   animation-delay: 0.46s;
 }
 
-/* Scroll Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1678,81 +1556,6 @@ body::after {
   transform: translateY(0);
 }
 
-/* ========================================
-   Responsive
-======================================== */
-@media (max-width: 991.98px) {
-  .hero-section {
-    padding-top: 110px;
-    padding-bottom: 70px;
-  }
-
-  :root {
-    --section-py: 64px;
-  }
-
-  .results-track {
-    height: 360px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  :root {
-    --section-py: 52px;
-  }
-
-  .hero-title {
-    font-size: 1.85rem;
-  }
-
-  .results-track {
-    height: 400px;
-  }
-
-  .result-slide {
-    width: min(88%, 400px);
-  }
-
-  .result-slide.is-left-1,
-  .result-slide.is-right-1 {
-    opacity: 0;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .countdown-wrapper {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .video-controls {
-    flex-wrap: wrap;
-  }
-
-  .vc-time {
-    order: 4;
-    width: 100%;
-    text-align: center;
-  }
-
-  .vc-volume {
-    flex: 0 0 100%;
-  }
-
-  .payment-line {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
-
-  .result-slide {
-    width: 92%;
-  }
-}
-
-/* ========================================
-   AZM — Hero Price Badge
-======================================== */
 .hero-price-badge {
   display: inline-flex;
   align-items: center;
@@ -1791,9 +1594,6 @@ body::after {
   border: 1px solid rgba(245, 158, 11, 0.28);
 }
 
-/* ========================================
-   AZM — Problem Cards Override
-======================================== */
 .problem-card {
   border-color: rgba(248, 113, 113, 0.12);
 }
@@ -1808,9 +1608,6 @@ body::after {
   color: #f87171 !important;
 }
 
-/* ========================================
-   AZM — Problem Conclusion Banner
-======================================== */
 .problem-conclusion {
   display: inline-flex;
   align-items: center;
@@ -1838,9 +1635,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-/* ========================================
-   AZM — Coach Avatar Placeholder
-======================================== */
 .coach-avatar-placeholder {
   width: 110px;
   height: 110px;
@@ -1853,9 +1647,6 @@ body::after {
   margin-bottom: 1rem;
 }
 
-/* ========================================
-   AZM — Top Sticky Bar
-======================================== */
 .top-bar {
   position: fixed;
   top: 0;
@@ -1877,12 +1668,12 @@ body::after {
 .top-bar-countdown {
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   letter-spacing: 0.05em;
 }
 
 .top-bar-countdown small {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
   opacity: 0.8;
   margin-right: 1px;
@@ -1904,9 +1695,6 @@ body::after {
   color: #dc2626;
 }
 
-/* ========================================
-   AZM - Bottom Sticky CTA
-======================================== */
 .bottom-sticky-cta {
   position: fixed;
   left: 0;
@@ -1980,9 +1768,6 @@ body::after {
   filter: brightness(1.02);
 }
 
-/* ========================================
-   AZM — Skills / Tags Bar
-======================================== */
 .skills-bar {
   background: #000000;
   border-top: 1px solid var(--border-subtle);
@@ -2014,9 +1799,6 @@ body::after {
   font-size: 0.95rem;
 }
 
-/* ========================================
-   AZM — Hero Social Proof Row
-======================================== */
 .hero-proof-item {
   display: inline-flex;
   align-items: center;
@@ -2043,7 +1825,6 @@ body::after {
   font-weight: 500;
 }
 
-/* Hero Avatars */
 .hero-avatars {
   display: flex;
   justify-content: center;
@@ -2067,9 +1848,6 @@ body::after {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* ========================================
-   AZM — Video Testimonial Thumb
-======================================== */
 .result-video-thumb {
   aspect-ratio: 16/9;
   background: var(--bg-elevated);
@@ -2087,9 +1865,6 @@ body::after {
   opacity: 0.8;
 }
 
-/* ========================================
-   AZM — Curriculum Accordion
-======================================== */
 .curr-accordion .curr-item {
   background: transparent;
   border: 1px solid var(--border-subtle) !important;
@@ -2195,9 +1970,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-/* ========================================
-   AZM — Pricing Progress Bar
-======================================== */
 .pricing-alert {
   display: flex;
   align-items: center;
@@ -2355,9 +2127,6 @@ body::after {
   color: var(--text-muted);
 }
 
-/* ========================================
-   AZM — Guarantee Section
-======================================== */
 .guarantee-section {
   background: #000000;
 }
@@ -2420,9 +2189,6 @@ body::after {
   color: var(--accent-gold);
 }
 
-/* ========================================
-   AZM — Community Phone Slider
-======================================== */
 .community-slider {
   position: relative;
   overflow: hidden;
@@ -2472,9 +2238,6 @@ body::after {
   margin-top: 1.5rem;
 }
 
-/* ========================================
-   AZM — Payment 2-column
-======================================== */
 .payment-country-badge {
   display: inline-flex;
   align-items: center;
@@ -2504,63 +2267,6 @@ body::after {
   margin-right: 0.4rem;
 }
 
-/* ========================================
-   AZM — Responsive Adjustments
-======================================== */
-@media (max-width: 576px) {
-  .top-bar {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.5rem;
-  }
-
-  .bottom-sticky-cta {
-    bottom: 8px;
-  }
-
-  .bottom-sticky-cta-inner {
-    border-radius: 18px;
-    padding: 0.75rem;
-    gap: 0.7rem;
-  }
-
-  .bottom-sticky-title {
-    font-size: 1.05rem;
-  }
-
-  .bottom-sticky-sub {
-    font-size: 0.75rem;
-  }
-
-  .bottom-sticky-btn {
-    font-size: 0.95rem;
-    padding: 0.58rem 1rem;
-  }
-
-  .curr-btn {
-    font-size: 0.88rem;
-  }
-
-  .pricing-final-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .community-phone {
-    width: 80px;
-  }
-
-  .community-phone.active {
-    width: 110px;
-  }
-
-  .guarantee-card {
-    padding: 1.5rem 1rem;
-  }
-}
-
-/* ========================================
-   AZM — Testimonial Video Thumb
-======================================== */
 .result-video-thumb {
   position: relative;
   aspect-ratio: 16/9;
@@ -2571,7 +2277,6 @@ body::after {
   border: 1px solid var(--border-subtle);
 }
 
-/* Volume control bar — shows at bottom when video plays */
 .thumb-vol-bar {
   position: absolute;
   bottom: 0;
@@ -2605,7 +2310,6 @@ body::after {
   cursor: pointer;
 }
 
-/* Community carousel image */
 .comm-img {
   width: 100%;
   height: 100%;
@@ -2637,9 +2341,6 @@ body::after {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
 }
 
-/* ========================================
-   AZM — Community Phone Image
-======================================== */
 .phone-img {
   width: 100%;
   height: 100%;
@@ -2648,9 +2349,6 @@ body::after {
   border-radius: inherit;
 }
 
-/* ========================================
-   AZM — Coach Avatar (plan.png)
-======================================== */
 .coach-avatar {
   width: 100%;
   max-width: 100%;
@@ -2664,12 +2362,6 @@ body::after {
   object-position: top center;
 }
 
-/* ========================================
-   AZM — Flat Horizontal Video Slider
-======================================== */
-/* ========================================
-   AZM — Video Slider Cards
-======================================== */
 .vid-card {
   width: min(90%, 320px);
   margin: 0 auto;
@@ -2807,7 +2499,6 @@ body::after {
   overflow: hidden;
 }
 
-/* Arrows */
 .vid-arrow {
   flex-shrink: 0;
   width: 42px;
@@ -2839,21 +2530,6 @@ body::after {
   transform: none;
 }
 
-@media (max-width: 768px) {
-  .vid-card {
-    flex: 0 0 calc(33.33% - 10px);
-  }
-}
-
-@media (max-width: 480px) {
-  .vid-card {
-    flex: 0 0 calc(50% - 8px);
-  }
-}
-
-/* ========================================
-   AZM — Community Slider Grab Cursor
-======================================== */
 #communitySlider .results-track {
   cursor: grab;
 }
@@ -2862,9 +2538,6 @@ body::after {
   cursor: grabbing;
 }
 
-/* ========================================
-   Video Testimonials Slider
-======================================== */
 #testimonialsCarousel {
   width: 100%;
   padding-bottom: 2rem;
@@ -2898,7 +2571,6 @@ body::after {
   display: block;
 }
 
-/* Central Play Button */
 .testimo-play-center {
   position: absolute;
   top: 50%;
@@ -2922,13 +2594,11 @@ body::after {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* Hide center play button when playing */
 .testimo-thumb.is-playing .testimo-play-center {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Bottom Bar inside thumbnail */
 .testimo-bottom-bar {
   position: absolute;
   bottom: 8px;
@@ -2944,7 +2614,6 @@ body::after {
   transition: opacity 0.3s;
 }
 
-/* Fullscreen Overrides - Testimonial Video */
 .testimo-thumb:fullscreen {
   width: 100vw;
   height: 100vh;
@@ -3010,7 +2679,7 @@ body::after {
   margin: 0 6px;
   font-variant-numeric: tabular-nums;
   direction: ltr;
-  /* keep time formatting proper */
+  
 }
 
 .testimo-dot {
@@ -3063,7 +2732,6 @@ body::after {
   letter-spacing: 2px;
 }
 
-/* Carousel Navigation */
 .testimo-prev-btn,
 .testimo-next-btn {
   width: 50px;
@@ -3083,14 +2751,23 @@ body::after {
   border: none;
 }
 
+.testimo-prev-btn::after,
+.testimo-next-btn::after {
+  display: none !important;
+  
+}
+
 .testimo-prev-btn {
-  right: 20px;
+  right: -5px;
   left: auto;
+  top: calc(50% - 24px);
+  
 }
 
 .testimo-next-btn {
-  left: 20px;
+  left: -5px;
   right: auto;
+  top: calc(50% - 24px);
 }
 
 .testimo-prev-btn:hover,
@@ -3118,14 +2795,31 @@ body::after {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-
-  .testimo-prev-btn,
-  .testimo-next-btn {
-    display: none;
+@media (max-width: 991.98px) {
+  :root {
+    --section-py: 64px;
   }
 
-  /* Responsive Hero Stats */
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-py: 52px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw + 0.5rem, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
   .stat-number {
     font-size: 2.2rem;
   }
@@ -3143,12 +2837,13 @@ body::after {
     padding: 0.8rem 0.4rem;
   }
 
-  /* Responsive Avatars */
   .avatar {
     width: 42px;
     height: 42px;
     font-size: 0.95rem;
     margin: 0 -6px;
+    border: 2px solid #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .hero-stars {
@@ -3159,11 +2854,138 @@ body::after {
   .hero-rating-text {
     font-size: 0.8rem;
   }
+
+  .vid-card {
+    flex: 0 0 calc(33.33% - 10px);
+  }
+
+  .communitySwiper .swiper-slide {
+    width: 280px !important;
+    max-width: 280px !important;
+  }
+
+  .communitySwiper .swiper-slide-active {
+    transform: scale(1.1) translateZ(0) rotateY(0deg) !important;
+  }
+
+  .testimo-prev-btn,
+  .testimo-next-btn {
+    display: none !important;
+  }
+
+  
+  .vc-menu-btn,
+  .testimo-menu-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vc-time,
+  .testimo-time {
+    min-width: unset !important;
+    font-size: 0.72rem !important;
+  }
+
+  .vc-extra,
+  .testimo-extra,
+  .menu-spacer {
+    display: none !important;
+  }
+
+  .vc-progress,
+  .testimo-progress-container {
+    flex: 1 !important;
+    width: auto !important;
+  }
+
+  .video-controls,
+  .testimo-bottom-bar {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    row-gap: 0.75rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .video-controls.show-extras .vc-progress,
+  .testimo-bottom-bar.show-extras .testimo-progress-container {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    order: -1 !important;
+    margin: 0 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .video-controls.show-extras .vc-extra,
+  .testimo-bottom-bar.show-extras .testimo-extra {
+    display: inline-flex !important;
+  }
+
+  .video-controls.show-extras .dropup,
+  .testimo-bottom-bar.show-extras .dropup {
+    display: inline-block !important;
+  }
+
+  .video-controls.show-extras .vc-volume {
+    display: none !important;
+  }
+
+  .video-controls.show-extras .menu-spacer,
+  .testimo-bottom-bar.show-extras .menu-spacer {
+    display: block !important;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
 
-  /* Responsive Hero Stats */
+  .top-bar {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .countdown-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .payment-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .pricing-final-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-sticky-cta {
+    bottom: 8px;
+  }
+
+  .bottom-sticky-cta-inner {
+    border-radius: 18px;
+    padding: 0.75rem;
+    gap: 0.7rem;
+  }
+
+  .bottom-sticky-title {
+    font-size: 1.05rem;
+  }
+
+  .bottom-sticky-sub {
+    font-size: 0.75rem;
+  }
+
+  .bottom-sticky-btn {
+    font-size: 0.95rem;
+    padding: 0.58rem 1rem;
+  }
+
+  .curr-btn {
+    font-size: 0.88rem;
+  }
+
   .stat-number {
     font-size: 1.8rem;
   }
@@ -3178,7 +3000,7 @@ body::after {
   }
 
   .hero-stats {
-    margin-top: 2rem !important;
+    margin-top: 1.5rem !important;
   }
 
   .hero-stats .stat-card {
@@ -3186,7 +3008,6 @@ body::after {
     border-radius: 12px;
   }
 
-  /* Responsive Avatars */
   .hero-avatars {
     gap: 0;
     margin-bottom: 1rem;
@@ -3197,31 +3018,246 @@ body::after {
     height: 38px;
     font-size: 0.85rem;
     margin: 0 -5px;
-    border: 2px solid #000000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .hero-stars {
     font-size: 1.2rem;
-    letter-spacing: 2px;
     margin-bottom: 0.5rem;
   }
 
-  .hero-rating-text {
+  .hero-rating-text,
+  .hero-proof-item {
     font-size: 0.75rem;
     margin-top: 4px;
   }
 
-  .hero-proof-item {
-    font-size: 0.75rem;
+  .community-phone {
+    width: 80px;
   }
 
-  .hero-title {
-    font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.5rem);
-    margin-bottom: 1rem;
+  .community-phone.active {
+    width: 110px;
   }
 
-  .hero-subtitle {
-    font-size: 0.95rem;
+  .guarantee-card {
+    padding: 1.5rem 1rem;
   }
+
+  .vid-card {
+    flex: 0 0 calc(50% - 8px);
+  }
+
+  .communitySwiper .swiper-slide {
+    width: 240px !important;
+    max-width: 240px !important;
+  }
+
+  .communitySwiper .swiper-slide-active {
+    transform: scale(1.05) translateZ(0) rotateY(0deg) !important;
+  }
+}
+
+.payment-offer-title {
+  font-size: 1.5rem;
+}
+
+.payment-instructions {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #1a1b1f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2c2e36;
+}
+
+.payment-instructions-title {
+  font-size: 1.2rem;
+}
+
+.payment-instructions-list {
+  color: #d1d1d1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.payment-alert {
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.payment-alert-info {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #d1d1d1;
+}
+
+.payment-alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.payment-link-text {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 700;
+  border-radius: var(--btn-radius);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-gold:hover {
+  background: var(--accent-gold);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--glow-gold);
+}
+
+.payment-guarantee-icon {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.payment-guarantee-text {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+}
+
+.payment-guarantee-text strong {
+  color: #fff;
+}
+
+.payment-contact-text {
+  color: #8b8d96;
+  font-size: 0.9rem;
+}
+
+.payment-whatsapp-icon {
+  color: #25D366;
+  font-size: 1.1rem;
+}
+
+.hero-section {
+  padding-top: 100px;
+}
+
+.hero-section .container {
+  z-index: 1;
+}
+
+.menu-spacer {
+  display: none;
+}
+
+.dropdown-menu {
+  min-width: 180px;
+  font-size: 0.85rem;
+  z-index: 1050;
+}
+
+.testimo-fullscreen-btn.dropdown-toggle {
+  padding: 0 4px;
+}
+
+.testimo-extra .dropdown-menu {
+  min-width: 160px;
+  font-size: 0.8rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 -8px;
+  border: 3px solid #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.avatar:nth-child(1) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.avatar:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.avatar:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.avatar:nth-child(4) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.avatar:nth-child(5) {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.avatar:nth-child(6) {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.section-subtitle {
+  color: #d1d1d1;
+}
+
+.col-lg-7.reveal {
+  transition-delay: 0.15s;
+}
+
+.story-icon.bi-x-circle {
+  color: var(--accent-danger);
+}
+
+.story-icon.bi-check-circle-fill {
+  color: var(--accent-primary);
+}
+
+.investment-section .container {
+  z-index: 1;
+}
+
+.pricing-progress-fill {
+  width: 76%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-primary));
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.pricing-live-note i {
+  font-size: 1.5rem;
+}
+
+.result-card-inner.p-0 {
+  overflow: hidden;
+  border-radius: var(--card-radius);
+}
+
+.comm-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.communitySwiper .swiper-pagination {
+  position: static;
+  margin-top: 10px;
 }

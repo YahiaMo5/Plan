@@ -4,43 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="دليل عزم AZM — نظام تمرين وتغذية متكامل يساعدك تشوف نتيجة حقيقية من تمرينك في الجيم أو البيت." />
-  <!-- Open Graph Meta Tags -->
+  <meta name="description"
+    content="دليل عزم AZM — نظام تمرين وتغذية متكامل يساعدك تشوف نتيجة حقيقية من تمرينك في الجيم أو البيت." />
+  
   <meta property="og:title" content="دليل عزم AZM — ابني جسمك بدون مدرّب بـ 199 جنيه فقط" />
-  <meta property="og:description" content="نظام تمرين وتغذية متكامل يساعدك تشوف نتيجة حقيقية من تمرينك في الجيم أو البيت." />
+  <meta property="og:description"
+    content="نظام تمرين وتغذية متكامل يساعدك تشوف نتيجة حقيقية من تمرينك في الجيم أو البيت." />
   <meta property="og:image" content="resources/images/عزم-02.png" />
   <meta property="og:type" content="website" />
-  
-  <!-- Twitter Card Meta Tags -->
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="دليل عزم AZM" />
   <meta name="twitter:description" content="ابني جسمك بدون مدرّب بـ 199 جنيه فقط" />
   <meta name="twitter:image" content="resources/images/عزم-02.png" />
   <title>دليل عزم AZM — ابني جسمك بدون مدرّب بـ 199 جنيه فقط</title>
+  <link rel="icon" type="image/png" href="resources/images/عزم-02.png" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <!-- Bootstrap RTL -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- ============ TOP STICKY COUNTDOWN BAR ============ -->
   <div class="top-bar" id="topBar">
     <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
       <span class="top-bar-label">العرض ينتهي بعد:</span>
@@ -55,7 +51,6 @@
     </div>
   </div>
 
-  <!-- ============ BOTTOM STICKY CTA BAR ============ -->
   <div class="bottom-sticky-cta" id="bottomStickyCta" aria-hidden="true">
     <div class="container">
       <div class="bottom-sticky-cta-inner">
@@ -68,11 +63,9 @@
     </div>
   </div>
 
-  <!-- ============ 1. HERO SECTION ============ -->
-  <section id="hero" class="hero-section" style="padding-top: 100px;">
-    <div class="container position-relative" style="z-index:1">
+  <section id="hero" class="hero-section">
+    <div class="container position-relative">
 
-      <!-- Alert badge -->
       <div class="text-center mb-3 fade-up">
         <div class="badge-discount d-inline-flex">
           <i class="bi bi-lightning-charge-fill"></i>
@@ -80,7 +73,6 @@
         </div>
       </div>
 
-      <!-- Main Heading -->
       <div class="text-center mb-4 fade-up delay-1">
         <h1 class="hero-title">
           إزاي تعمل فورمة الصيف<br>
@@ -92,7 +84,6 @@
         </p>
       </div>
 
-      <!-- Video + CTA block -->
       <div class="row justify-content-center fade-up delay-2">
         <div class="col-lg-7">
           <div class="video-card">
@@ -117,22 +108,23 @@
                 <button class="vc-btn" id="playPauseBtn" aria-label="تشغيل / إيقاف">
                   <i class="bi bi-play-fill"></i>
                 </button>
-                <input type="range" class="vc-progress" id="progressBar" min="0" max="100" value="0" />
-                <span class="vc-time" id="timeLabel">0:00 / 0:00</span>
-                <button class="vc-btn" id="muteBtn" aria-label="كتم الصوت">
+                <input type="range" class="vc-progress vc-hide-on-menu" id="progressBar" min="0" max="100" value="0" />
+                <span class="vc-time vc-hide-on-menu" id="timeLabel">0:00 / 0:00</span>
+                <div class="menu-spacer flex-grow-1"></div>
+                <button class="vc-btn vc-extra" id="muteBtn" aria-label="كتم الصوت">
                   <i class="bi bi-volume-up-fill"></i>
                 </button>
-                <input type="range" class="vc-volume" id="volumeBar" min="0" max="1" step="0.05" value="1" />
-                <button class="vc-btn" id="fullScreenBtn" aria-label="ملء الشاشة">
+                <input type="range" class="vc-volume vc-extra" id="volumeBar" min="0" max="1" step="0.05" value="1" />
+                <button class="vc-btn vc-extra" id="fullScreenBtn" aria-label="ملء الشاشة">
                   <i class="bi bi-arrows-fullscreen"></i>
                 </button>
-                <div class="dropup d-inline-block ms-1">
+                <div class="dropup d-inline-block ms-1 vc-extra">
                   <button class="vc-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                     data-bs-auto-close="outside" aria-label="الإعدادات">
                     <i class="bi bi-gear-fill"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
-                    style="min-width: 180px; font-size: 0.85rem; z-index: 1050;">
+                   >
                     <li>
                       <h6 class="dropdown-header text-white"><i class="bi bi-speedometer2 me-2"></i>سرعة التشغيل</h6>
                     </li>
@@ -154,11 +146,13 @@
                         data-quality="auto">تلقائي</a></li>
                   </ul>
                 </div>
+                <button class="vc-btn vc-menu-btn" id="promoMenuBtn" aria-label="خيارات">
+                  <i class="bi bi-three-dots"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- CTA Button -->
           <div class="text-center mt-4">
             <a href="#pricing" class="btn btn-gradient btn-lg px-5 py-3 d-inline-flex align-items-center gap-2">
               <span>اشتري الآن</span>
@@ -166,7 +160,6 @@
             </a>
           </div>
 
-          <!-- Social proof row -->
           <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-3 fade-up delay-3">
             <div class="hero-proof-item">
               <i class="bi bi-people-fill"></i>
@@ -182,15 +175,14 @@
             </div>
           </div>
 
-          <!-- Users Avatars + Reviews -->
           <div class="text-center mt-5 fade-up delay-4">
             <div class="hero-avatars mb-3">
-              <div class="avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">ع</div>
-              <div class="avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">أ</div>
-              <div class="avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">م</div>
-              <div class="avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">ك</div>
-              <div class="avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">ي</div>
-              <div class="avatar" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%)">ص</div>
+              <div class="avatar">ع</div>
+              <div class="avatar">أ</div>
+              <div class="avatar">م</div>
+              <div class="avatar">ك</div>
+              <div class="avatar">ي</div>
+              <div class="avatar">ص</div>
             </div>
             <div class="hero-stars mb-2">
               <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -201,7 +193,6 @@
         </div>
       </div>
 
-      <!-- Stats Row -->
       <div class="row g-3 hero-stats mt-5 justify-content-center fade-up delay-4">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="stat-card">
@@ -229,7 +220,6 @@
     </div>
   </section>
 
-  <!-- ============ 2. SKILLS / TAGS BAR ============ -->
   <div class="skills-bar py-4 mt-2">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -243,223 +233,209 @@
     </div>
   </div>
 
-  <!-- ============ 3. VIDEO TESTIMONIALS ============ -->
   <section id="testimonials" class="section-padding results-section">
     <div class="container-fluid px-0">
       <div class="section-heading text-center mb-4 reveal px-3">
         <span class="section-eyebrow">اعرف اكثر عن الكتاب</span>
         <h2 class="section-title mt-3">محتوى شامل <span class="text-gradient">مصمم بعناية</span></h2>
-        <p class="section-subtitle" style="color:#d1d1d1;">الدليل يتضمن برامج تمرين متقدمة، خطط غذائية مصرية أصيلة، شروحات فيديو تفصيلية، وجميع ما تحتاجه لتحقق النتائج الحقيقية من تمرينك.</p>
+        <p class="section-subtitle">الدليل يتضمن برامج تمرين متقدمة، خطط غذائية مصرية أصيلة،
+          شروحات فيديو تفصيلية، وجميع ما تحتاجه لتحقق النتائج الحقيقية من تمرينك.</p>
       </div>
 
-      <!-- Bootstrap Carousel for Testimonials -->
-      <div class="container px-4 px-md-5">
-        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner pb-5">
+      <div class="container px-4 px-md-5 position-relative">
+        <div class="swiper testimoSwiper pb-5">
+          <div class="swiper-wrapper">
 
-            <!-- Carousel Item 1 -->
-            <div class="carousel-item active">
-              <div class="row gx-3 gx-md-4 justify-content-center">
-
-                <!-- Slide 1 -->
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="testimo-card">
-                    <div class="testimo-thumb">
-                      <video src="resources/videos/1.mp4"
-                        class="testimo-video" playsinline preload="metadata"></video>
-                      <button class="testimo-play-center" aria-label="تشغيل">
-                        <i class="bi bi-play-fill text-white fs-1"></i>
-                      </button>
-                      <div class="testimo-bottom-bar">
-                        <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
-                        <span class="testimo-time">3:35</span>
-                        <span class="testimo-dot">•</span>
-                        <div class="testimo-progress-container flex-grow-1 mx-2">
-                          <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
-                        </div>
-                        <button class="testimo-fullscreen-btn ms-2"><i class="bi bi-arrows-fullscreen"></i></button>
-                        <div class="dropup d-inline-block ms-1">
-                          <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-bs-auto-close="outside" style="padding: 0 4px;"
-                            aria-label="الإعدادات">
-                            <i class="bi bi-gear-fill"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
-                            style="min-width: 160px; font-size: 0.8rem; z-index: 1050;">
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة
-                              </h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي
-                                (1x)</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
-                            <li>
-                              <hr class="dropdown-divider border-secondary my-1">
-                            </li>
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p
-                                <span class="badge bg-danger ms-1">HD</span></a></li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
-                                data-quality="auto">تلقائي</a></li>
-                          </ul>
-                        </div>
-                      </div>
+            <div class="swiper-slide mb-4">
+              <div class="testimo-card">
+                <div class="testimo-thumb">
+                  <video src="resources/videos/1.mp4" class="testimo-video" playsinline preload="metadata"></video>
+                  <button class="testimo-play-center" aria-label="تشغيل">
+                    <i class="bi bi-play-fill text-white fs-1"></i>
+                  </button>
+                  <div class="testimo-bottom-bar">
+                    <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
+                    <span class="testimo-time testimo-hide-on-menu">3:35</span>
+                    <span class="testimo-dot testimo-hide-on-menu">•</span>
+                    <div class="testimo-progress-container flex-grow-1 mx-2 testimo-hide-on-menu">
+                      <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
                     </div>
+                    <div class="menu-spacer flex-grow-1"></div>
+                    <button class="testimo-fullscreen-btn ms-2 testimo-extra"><i
+                        class="bi bi-arrows-fullscreen"></i></button>
+                    <div class="dropup d-inline-block ms-1 testimo-extra">
+                      <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside"
+                        aria-label="الإعدادات">
+                        <i class="bi bi-gear-fill"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
+                       >
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي (1x)</a>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
+                        <li>
+                          <hr class="dropdown-divider border-secondary my-1">
+                        </li>
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p <span
+                              class="badge bg-danger ms-1">HD</span></a></li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a></li>
+                        <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
+                            data-quality="auto">تلقائي</a></li>
+                      </ul>
+                    </div>
+                    <button class="testimo-fullscreen-btn testimo-menu-btn ms-1" aria-label="خيارات">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
                   </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="testimo-card">
-                    <div class="testimo-thumb">
-                      <video src="resources/videos/2.mp4"
-                        class="testimo-video" playsinline preload="metadata"></video>
-                      <button class="testimo-play-center" aria-label="تشغيل">
-                        <i class="bi bi-play-fill text-white fs-1"></i>
-                      </button>
-                      <div class="testimo-bottom-bar">
-                        <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
-                        <span class="testimo-time">1:52</span>
-                        <span class="testimo-dot">•</span>
-                        <div class="testimo-progress-container flex-grow-1 mx-2">
-                          <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
-                        </div>
-                        <button class="testimo-fullscreen-btn ms-2"><i class="bi bi-arrows-fullscreen"></i></button>
-                        <div class="dropup d-inline-block ms-1">
-                          <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-bs-auto-close="outside" style="padding: 0 4px;"
-                            aria-label="الإعدادات">
-                            <i class="bi bi-gear-fill"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
-                            style="min-width: 160px; font-size: 0.8rem; z-index: 1050;">
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة
-                              </h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي
-                                (1x)</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
-                            <li>
-                              <hr class="dropdown-divider border-secondary my-1">
-                            </li>
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p
-                                <span class="badge bg-danger ms-1">HD</span></a></li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
-                                data-quality="auto">تلقائي</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="col-6 col-lg-3 mb-4 d-none d-lg-block">
-                  <div class="testimo-card">
-                    <div class="testimo-thumb">
-                      <video src="resources/videos/3.mp4"
-                        class="testimo-video" playsinline preload="metadata"></video>
-                      <button class="testimo-play-center" aria-label="تشغيل">
-                        <i class="bi bi-play-fill text-white fs-1"></i>
-                      </button>
-                      <div class="testimo-bottom-bar">
-                        <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
-                        <span class="testimo-time">1:40</span>
-                        <span class="testimo-dot">•</span>
-                        <div class="testimo-progress-container flex-grow-1 mx-2">
-                          <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
-                        </div>
-                        <button class="testimo-fullscreen-btn ms-2"><i class="bi bi-arrows-fullscreen"></i></button>
-                        <div class="dropup d-inline-block ms-1">
-                          <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-bs-auto-close="outside" style="padding: 0 4px;"
-                            aria-label="الإعدادات">
-                            <i class="bi bi-gear-fill"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
-                            style="min-width: 160px; font-size: 0.8rem; z-index: 1050;">
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة
-                              </h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي
-                                (1x)</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
-                            <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
-                            <li>
-                              <hr class="dropdown-divider border-secondary my-1">
-                            </li>
-                            <li>
-                              <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p
-                                <span class="badge bg-danger ms-1">HD</span></a></li>
-                            <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a>
-                            </li>
-                            <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
-                                data-quality="auto">تلقائي</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+            </div>
 
-          <!-- Indicators -->
-          <div class="carousel-indicators testimo-indicators pb-2">
-            <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
+            <div class="swiper-slide mb-4">
+              <div class="testimo-card">
+                <div class="testimo-thumb">
+                  <video src="resources/videos/2.mp4" class="testimo-video" playsinline preload="metadata"></video>
+                  <button class="testimo-play-center" aria-label="تشغيل">
+                    <i class="bi bi-play-fill text-white fs-1"></i>
+                  </button>
+                  <div class="testimo-bottom-bar">
+                    <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
+                    <span class="testimo-time testimo-hide-on-menu">1:52</span>
+                    <span class="testimo-dot testimo-hide-on-menu">•</span>
+                    <div class="testimo-progress-container flex-grow-1 mx-2 testimo-hide-on-menu">
+                      <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
+                    </div>
+                    <div class="menu-spacer flex-grow-1"></div>
+                    <button class="testimo-fullscreen-btn ms-2 testimo-extra"><i
+                        class="bi bi-arrows-fullscreen"></i></button>
+                    <div class="dropup d-inline-block ms-1 testimo-extra">
+                      <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside"
+                        aria-label="الإعدادات">
+                        <i class="bi bi-gear-fill"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
+                       >
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي (1x)</a>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
+                        <li>
+                          <hr class="dropdown-divider border-secondary my-1">
+                        </li>
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p <span
+                              class="badge bg-danger ms-1">HD</span></a></li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a></li>
+                        <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
+                            data-quality="auto">تلقائي</a></li>
+                      </ul>
+                    </div>
+                    <button class="testimo-fullscreen-btn testimo-menu-btn ms-1" aria-label="خيارات">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide mb-4">
+              <div class="testimo-card">
+                <div class="testimo-thumb">
+                  <video src="resources/videos/3.mp4" class="testimo-video" playsinline preload="metadata"></video>
+                  <button class="testimo-play-center" aria-label="تشغيل">
+                    <i class="bi bi-play-fill text-white fs-1"></i>
+                  </button>
+                  <div class="testimo-bottom-bar">
+                    <button class="testimo-play-sm"><i class="bi bi-play-fill"></i></button>
+                    <span class="testimo-time testimo-hide-on-menu">1:40</span>
+                    <span class="testimo-dot testimo-hide-on-menu">•</span>
+                    <div class="testimo-progress-container flex-grow-1 mx-2 testimo-hide-on-menu">
+                      <input type="range" class="testimo-progress-range w-100" min="0" max="100" value="0" />
+                    </div>
+                    <div class="menu-spacer flex-grow-1"></div>
+                    <button class="testimo-fullscreen-btn ms-2 testimo-extra"><i
+                        class="bi bi-arrows-fullscreen"></i></button>
+                    <div class="dropup d-inline-block ms-1 testimo-extra">
+                      <button class="testimo-fullscreen-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside"
+                        aria-label="الإعدادات">
+                        <i class="bi bi-gear-fill"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark shadow p-2 text-end"
+                       >
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-speedometer2 me-2"></i>السرعة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="0.5">0.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn active py-1" href="#" data-speed="1">عادي (1x)</a>
+                        </li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="1.5">1.5x</a></li>
+                        <li><a class="dropdown-item testimo-speed-btn py-1" href="#" data-speed="2">2x</a></li>
+                        <li>
+                          <hr class="dropdown-divider border-secondary my-1">
+                        </li>
+                        <li>
+                          <h6 class="dropdown-header text-white py-1"><i class="bi bi-display me-2"></i>الجودة</h6>
+                        </li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="1080">1080p <span
+                              class="badge bg-danger ms-1">HD</span></a></li>
+                        <li><a class="dropdown-item testimo-quality-btn py-1" href="#" data-quality="720">720p</a></li>
+                        <li><a class="dropdown-item testimo-quality-btn active text-warning py-1" href="#"
+                            data-quality="auto">تلقائي</a></li>
+                      </ul>
+                    </div>
+                    <button class="testimo-fullscreen-btn testimo-menu-btn ms-1" aria-label="خيارات">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Controls -->
-          <button class="carousel-control-prev testimo-prev-btn" type="button" data-bs-target="#testimonialsCarousel"
-            data-bs-slide="prev">
-            <i class="bi bi-chevron-right text-dark fs-4 fw-bold"></i>
-            <span class="visually-hidden">السابق</span>
-          </button>
-          <button class="carousel-control-next testimo-next-btn" type="button" data-bs-target="#testimonialsCarousel"
-            data-bs-slide="next">
-            <i class="bi bi-chevron-left text-dark fs-4 fw-bold"></i>
-            <span class="visually-hidden">التالي</span>
-          </button>
+          <div class="swiper-pagination community-indicators pb-2"></div>
+
         </div>
+
+        <button class="swiper-button-prev testimo-prev-btn" aria-label="السابق">
+          <i class="bi bi-chevron-right fs-4 fw-bold"></i>
+        </button>
+        <button class="swiper-button-next testimo-next-btn" aria-label="التالي">
+          <i class="bi bi-chevron-left fs-4 fw-bold"></i>
+        </button>
+
       </div>
     </div>
   </section>
 
-  <!-- ============ 4. WHY SECTION — Coach + Problem List ============ -->
   <section id="why" class="section-padding bg-light-alt">
     <div class="container">
       <div class="row g-5 align-items-center">
 
-        <!-- Coach Image / Card (Left) -->
         <div class="col-lg-5 reveal">
           <div class="coach-card text-center">
             <img src="resources/images/plan.png" alt="دليل عزم AZM" class="coach-avatar" />
           </div>
         </div>
 
-        <!-- Why Text (Right) -->
-        <div class="col-lg-7 reveal" style="transition-delay:.15s">
+        <div class="col-lg-7 reveal">
           <span class="section-eyebrow">قصة المشكلة</span>
           <h2 class="section-title mt-3 mb-4">ليه عملت دليل عزم؟</h2>
           <p class="story-body-text">
@@ -473,27 +449,27 @@
           <p class="story-body-text">المشاكل اللي بتعاني منها لما بتتمرن لوحدك:</p>
           <ul class="list-unstyled story-list">
             <li>
-              <i class="bi bi-x-circle story-icon" style="color:var(--accent-danger)" aria-hidden="true"></i>
+              <i class="bi bi-x-circle story-icon" aria-hidden="true"></i>
               <span>تمارين عشوائية من غير خطة — مجهود ضايع ومفيش نتيجة</span>
             </li>
             <li>
-              <i class="bi bi-x-circle story-icon" style="color:var(--accent-danger)" aria-hidden="true"></i>
+              <i class="bi bi-x-circle story-icon" aria-hidden="true"></i>
               <span>تكنيك غلط بيضيّع المجهود وبيزوّد خطر الإصابة</span>
             </li>
             <li>
-              <i class="bi bi-x-circle story-icon" style="color:var(--accent-danger)" aria-hidden="true"></i>
+              <i class="bi bi-x-circle story-icon" aria-hidden="true"></i>
               <span>برامج مش مناسبة لمستواك أو لوقتك بتوقفك من أول يوم</span>
             </li>
             <li>
-              <i class="bi bi-x-circle story-icon" style="color:var(--accent-danger)" aria-hidden="true"></i>
+              <i class="bi bi-x-circle story-icon" aria-hidden="true"></i>
               <span>أكل بيبوّظ كل المجهود — دايت أجنبي غريب ومكلّف</span>
             </li>
             <li>
-              <i class="bi bi-check-circle-fill story-icon" style="color:var(--accent-primary)" aria-hidden="true"></i>
+              <i class="bi bi-check-circle-fill story-icon" aria-hidden="true"></i>
               <span>دليل عزم يديك نظام واضح للتمرين والتغذية من أول يوم</span>
             </li>
             <li>
-              <i class="bi bi-check-circle-fill story-icon" style="color:var(--accent-primary)" aria-hidden="true"></i>
+              <i class="bi bi-check-circle-fill story-icon" aria-hidden="true"></i>
               <span>مبني على أكل مصري بيتي — مش هتحتاج دايت غريب أو مكملات</span>
             </li>
           </ul>
@@ -503,7 +479,6 @@
     </div>
   </section>
 
-  <!-- ============ 5. CURRICULUM — Accordion ============ -->
   <section id="curriculum" class="section-padding">
     <div class="container">
       <div class="section-heading text-center mb-5 reveal">
@@ -651,7 +626,6 @@
 
           </div>
 
-          <!-- CTA under accordion -->
           <div class="text-center mt-4">
             <a href="#pricing" class="btn btn-gradient btn-lg px-5 py-3 d-inline-flex align-items-center gap-2">
               <span>اشتري الآن</span>
@@ -663,10 +637,9 @@
     </div>
   </section>
 
-  <!-- ============ 6. PRICING SECTION ============ -->
   <section id="pricing" class="section-padding investment-section text-white position-relative overflow-hidden">
     <div class="gradient-bg"></div>
-    <div class="container position-relative" style="z-index:1">
+    <div class="container position-relative">
 
       <div class="section-heading text-center mb-4 reveal">
         <span class="section-eyebrow investment-eyebrow">اشتري الآن</span>
@@ -674,7 +647,6 @@
         <p class="section-subtitle">العرض لفترة محدودة — بعد انتهائه السعر هيرجع للأصلي</p>
       </div>
 
-      <!-- Countdown in pricing -->
       <div class="text-center mb-4 reveal">
         <div class="countdown-wrapper d-inline-flex">
           <div class="countdown-item">
@@ -698,14 +670,12 @@
         <div class="col-lg-8 col-xl-7 reveal">
           <div class="pricing-card">
 
-            <!-- Discount alert -->
             <div class="pricing-alert">
               <i class="bi bi-lightning-charge-fill"></i>
               <span>عرض محدود لاول 100 مشتري فقط!</span>
               <span class="pricing-alert-sub">السعر لأول 100 مشتري — وبعدها بيروح السعر الطبيعي</span>
             </div>
 
-            <!-- Price display -->
             <div class="price-badge">
               <span class="price-label">السعر الحالي</span>
               <div class="d-flex align-items-baseline gap-2 price-amount mt-2">
@@ -718,10 +688,9 @@
               </div>
             </div>
 
-            <!-- Progress bar -->
             <div class="pricing-progress-wrap">
               <div class="pricing-progress-bar">
-                <div class="pricing-progress-fill" style="width: 76%"></div>
+                <div class="pricing-progress-fill"></div>
               </div>
               <div class="d-flex justify-content-between pricing-progress-labels">
                 <span>تم بيع 76%</span>
@@ -729,20 +698,17 @@
               </div>
             </div>
 
-            <!-- Buy button -->
             <a href="#payment"
               class="btn btn-gradient btn-lg w-100 py-3 my-3 d-inline-flex justify-content-center align-items-center gap-2">
               <i class="bi bi-cart-check-fill"></i>
               <span>اشتري الآن</span>
             </a>
 
-            <!-- Mostafa Badeel live -->
             <div class="pricing-live-note">
-              <i class="bi bi-dot text-danger" style="font-size:1.5rem"></i>
+              <i class="bi bi-dot text-danger"></i>
               <span>أعضاء نشطين الآن على الموقع</span>
             </div>
 
-            <!-- What you get -->
             <div class="mt-4">
               <p class="pricing-bonus-title">كل اللي هتاخده بوجودك شركاء:</p>
               <ul class="list-unstyled price-list">
@@ -789,7 +755,6 @@
               </ul>
             </div>
 
-            <!-- Final price repeat -->
             <div class="pricing-final-row">
               <div>
                 <span class="pricing-final-label">السعر الإجمالي</span>
@@ -802,7 +767,6 @@
               </a>
             </div>
 
-            <!-- Trust items -->
             <div class="pricing-trust-row">
               <span><i class="bi bi-people-fill icon-green"></i> +100 نتيجة اشتركوا من قبل</span>
               <span><i class="bi bi-shield-fill-check icon-green"></i> ضمان استرداد 30 يوم</span>
@@ -815,7 +779,6 @@
     </div>
   </section>
 
-  <!-- ============ 7. GUARANTEE SECTION ============ -->
   <section class="section-padding guarantee-section">
     <div class="container">
       <div class="row justify-content-center">
@@ -840,7 +803,6 @@
     </div>
   </section>
 
-  <!-- ============ 8. COMMUNITY / RESULTS SHOWCASE ============ -->
   <section class="section-padding results-section">
     <div class="container">
       <div class="section-heading text-center mb-4 reveal">
@@ -849,15 +811,13 @@
         <p class="section-subtitle">اسحب يمينًا أو يسارًا لمشاهدة لقطات من مجتمع عزم.</p>
       </div>
 
-      <!-- Swiper Coverflow for Community -->
       <div class="swiper communitySwiper">
         <div class="swiper-wrapper py-4 pb-5">
 
-          <!-- We duplicate slides to create a dense 3D effect exactly like the screenshot -->
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 1" class="comm-img" />
               </div>
             </article>
@@ -866,7 +826,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 2" class="comm-img" />
               </div>
             </article>
@@ -875,7 +835,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 3" class="comm-img" />
               </div>
             </article>
@@ -884,7 +844,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 4" class="comm-img" />
               </div>
             </article>
@@ -893,7 +853,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 5" class="comm-img" />
               </div>
             </article>
@@ -902,7 +862,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 6" class="comm-img" />
               </div>
             </article>
@@ -911,7 +871,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 7" class="comm-img" />
               </div>
             </article>
@@ -920,7 +880,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 8" class="comm-img" />
               </div>
             </article>
@@ -929,7 +889,7 @@
           <div class="swiper-slide">
             <article class="result-card">
               <div class="result-card-glow"></div>
-              <div class="result-card-inner p-0" style="overflow:hidden;border-radius:var(--card-radius)">
+              <div class="result-card-inner p-0">
                 <img src="resources/images/plan.png" alt="نتيجة 9" class="comm-img" />
               </div>
             </article>
@@ -937,13 +897,11 @@
 
         </div>
 
-        <!-- Custom Pagination Dots -->
-        <div class="swiper-pagination community-indicators" style="position: static; margin-top: 10px;"></div>
+        <div class="swiper-pagination community-indicators"></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 9. FAQ SECTION ============ -->
   <section id="faq" class="section-padding bg-light-alt">
     <div class="container">
       <div class="section-heading text-center mb-5 reveal">
@@ -1044,7 +1002,6 @@
     </div>
   </section>
 
-  <!-- ============ 10. FINAL CTA ============ -->
   <section class="section-padding final-cta-section">
     <div class="container text-center reveal">
       <span class="section-eyebrow mb-3 d-inline-flex">الخطوة الأولى</span>
@@ -1068,12 +1025,10 @@
     </div>
   </section>
 
-  <!-- ============ 11. PAYMENT SECTION ============ -->
   <section id="payment" class="section-padding payment-dark-section">
     <div class="container pb-4">
 
       <div class="payment-new-wrapper reveal">
-        <!-- Header -->
         <div class="payment-new-header text-center mb-4">
           <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
             <span class="section-eyebrow text-warning fw-bold fs-6"> <img src="https://flagcdn.com/w40/eg.png"
@@ -1087,10 +1042,8 @@
           </p>
         </div>
 
-        <!-- Options -->
         <div class="payment-new-options d-flex flex-column gap-3">
 
-          <!-- Vodafone Cash -->
           <div class="payment-box d-flex align-items-center justify-content-between">
             <div class="payment-box-info d-flex align-items-center gap-3 gap-md-4">
               <div class="payment-img-logo vf-cash-logo">
@@ -1098,15 +1051,14 @@
               </div>
               <div class="payment-box-text text-start">
                 <span class="d-block mb-1">Vodafone Cash</span>
-                <strong class="d-block text-white ltr-text m-0 fs-5">01012345678</strong>
+                <strong class="d-block text-white ltr-text m-0 fs-5">01274089823</strong>
               </div>
             </div>
             <div class="payment-box-copy">
-              <button class="btn-copy-yellow copyable" data-copy="01012345678">نسخ</button>
+              <button class="btn-copy-yellow copyable" data-copy="01274089823">نسخ</button>
             </div>
           </div>
 
-          <!-- InstaPay -->
           <div class="payment-box d-flex align-items-center justify-content-between">
             <div class="payment-box-info d-flex align-items-center gap-3 gap-md-4">
               <div class="payment-img-logo instapay-logo">
@@ -1114,27 +1066,57 @@
               </div>
               <div class="payment-box-text text-start">
                 <span class="d-block mb-1">InstaPay</span>
-                <strong class="d-block text-white ltr-text m-0 fs-5">01012345678</strong>
+                <strong class="d-block text-white ltr-text m-0 fs-5">01004030746</strong>
               </div>
             </div>
             <div class="payment-box-copy">
-              <button class="btn-copy-yellow copyable" data-copy="01012345678">نسخ</button>
+              <button class="btn-copy-yellow copyable" data-copy="01004030746">نسخ</button>
             </div>
           </div>
 
         </div>
 
-        <!-- Footer Note -->
         <div class="payment-new-footer text-center mt-5 pt-2">
-          <p class="d-flex justify-content-center align-items-center gap-2 m-0 flex-wrap">
-            بعد التحويل ابعت الإيصال على واتساب للتفعيل الفوري والتيم هيرد عليك خلال لحظات
-            <i class="bi bi-whatsapp" style="color:#25D366; font-size:1.1rem;"></i>
+          <h3 class="payment-offer-title text-white mb-4">العرض الحالي للدليل الشامل 199 ج بدل 1300 ج لفترة محدودة</h3>
+          
+          <div class="payment-instructions text-start">
+            <h4 class="payment-instructions-title text-white mb-3">بعد التحويل بترسلنا:</h4>
+            <ul class="list-unstyled payment-instructions-list">
+              <li class="mb-2">1 - الاسم</li>
+              <li class="mb-2">2 - البريد الإلكتروني</li>
+              <li class="mb-2">3 - صورة التحويل</li>
+            </ul>
+            
+            <div class="payment-alert payment-alert-info mt-3 mb-3">
+              الكتاب الكتروني وليس ورقي
+            </div>
+            
+            <p class="payment-link-text mb-3">
+              لو عايز تشوف أمثلة وتفاصيل أكتر للدليل الشامل:
+            </p>
+            <a href="https://lightsteelblue-antelope-467896.hostingersite.com/product/azm/" target="_blank" rel="noopener" class="btn btn-outline-gold mb-3 w-100">
+              <i class="bi bi-box-arrow-up-left me-2"></i>
+              شاهد تفاصيل الدليل الشامل
+            </a>
+            
+            <div class="payment-alert payment-alert-success mt-3">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-star-fill payment-guarantee-icon"></i>
+                <div class="payment-guarantee-text">
+                  <strong>ضمان ذهبي:</strong> جرب الكتاب لمدة 24 ساعة كاملين، ولو مش كافي؟ فلوسك بترجعلك مباشرة
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="payment-contact-text d-flex justify-content-center align-items-center gap-2 m-0 flex-wrap mt-4">
+            للتواصل والتفعيل الفوري
+            <i class="bi bi-whatsapp payment-whatsapp-icon"></i>
           </p>
         </div>
 
-        <!-- Final WA CTA -->
         <div class="text-center mt-4 reveal">
-          <a href="https://wa.me/201068928758" target="_blank" rel="noopener"
+          <a href="https://wa.me/+201055418598" target="_blank" rel="noopener"
             class="btn btn-whatsapp btn-lg d-inline-flex align-items-center gap-2 px-5">
             <i class="bi bi-whatsapp"></i>
             <span>تواصل معنا الآن على واتساب</span>
@@ -1143,7 +1125,6 @@
 
   </section>
 
-  <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container">
       <div class="text-center mb-3">
@@ -1160,16 +1141,12 @@
     </div>
   </footer>
 
-  <!-- Copy Toast -->
   <div id="copy-toast">✓ تم النسخ</div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 

@@ -1,4 +1,3 @@
-// ─── Navbar scroll effect ───────────────────
 (function () {
   const nav = document.getElementById("mainNav");
   if (!nav) return;
@@ -13,7 +12,6 @@
   onScroll();
 })();
 
-// Bottom sticky CTA show/hide on scroll
 (function () {
   const stickyBar = document.getElementById("bottomStickyCta");
   const paymentSection = document.getElementById("payment");
@@ -33,7 +31,6 @@
   onScroll();
 })();
 
-// ─── Active nav link on scroll ──────────────
 (function () {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -58,7 +55,6 @@
   sections.forEach((sec) => observer.observe(sec));
 })();
 
-// ─── Scroll Reveal animation ─────────────────
 (function () {
   const reveals = document.querySelectorAll(".reveal");
   if (!reveals.length) return;
@@ -78,7 +74,6 @@
   reveals.forEach((el) => observer.observe(el));
 })();
 
-// Click-to-copy
 (function () {
   const toast = document.getElementById("copy-toast");
   if (!toast) return;
@@ -123,20 +118,16 @@
   });
 })();
 
-// ─── Countdown Timer ─────────────────────────
 (function () {
-  // Pricing section elements
   const hoursEl = document.getElementById("cd-hours");
   const minutesEl = document.getElementById("cd-minutes");
   const secondsEl = document.getElementById("cd-seconds");
-  // Top bar elements
   const tbHours = document.getElementById("tb-hours");
   const tbMinutes = document.getElementById("tb-minutes");
   const tbSeconds = document.getElementById("tb-seconds");
 
   if (!hoursEl && !tbHours) return;
 
-  // Persist countdown across page refreshes using sessionStorage
   const STORAGE_KEY = "azm_countdown_end";
   let endTime = parseInt(sessionStorage.getItem(STORAGE_KEY), 10);
   if (!endTime || endTime <= Date.now()) {
@@ -151,11 +142,9 @@
     const h = Math.floor(diff / 3600);
     const m = Math.floor((diff % 3600) / 60);
     const s = diff % 60;
-    // Update pricing countdown
     if (hoursEl) hoursEl.textContent = pad(h);
     if (minutesEl) minutesEl.textContent = pad(m);
     if (secondsEl) secondsEl.textContent = pad(s);
-    // Update top bar countdown
     if (tbHours) tbHours.textContent = pad(h);
     if (tbMinutes) tbMinutes.textContent = pad(m);
     if (tbSeconds) tbSeconds.textContent = pad(s);
@@ -166,7 +155,6 @@
   const timer = setInterval(tick, 1000);
 })();
 
-// ─── Custom Video Controls ────────────────────
 (function () {
   const video = document.getElementById("promoVideo");
   if (!video) return;
@@ -269,7 +257,6 @@
     updateTime(); updateProgress(); updatePlayIcon();
   });
 
-  // Fullscreen support
   const fullScreenBtn = document.getElementById("fullScreenBtn");
   const heroWrapper = document.querySelector(".video-wrapper");
   const toggleFullScreen = () => {
@@ -294,7 +281,6 @@
     toggleFullScreen();
   });
 
-  // Settings Menu Logic (Hero Video)
   const speedBtns = document.querySelectorAll(".vc-speed-btn");
   speedBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -315,22 +301,27 @@
       qualityBtns.forEach(b => b.classList.remove("active", "text-warning"));
       btn.classList.add("active");
       if (btn.dataset.quality === 'auto') btn.classList.add("text-warning");
-      // Note: Actual quality switching requires different video source URLs
     });
   });
 
-  // Stop propagation on the settings dropup wrapper itself too
   const vcDropup = document.querySelector(".video-controls .dropup");
   if (vcDropup) {
     vcDropup.addEventListener("click", (e) => e.stopPropagation());
     vcDropup.addEventListener("dblclick", (e) => e.stopPropagation());
   }
 
+  const promoMenuBtn = document.getElementById("promoMenuBtn");
+  if (promoMenuBtn && controls) {
+    promoMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      controls.classList.toggle("show-extras");
+    });
+  }
+
   if (volumeBar) video.volume = Number(volumeBar.value ?? 1);
   updateMuteIcon(); updateTime(); updateProgress();
 })();
 
-// ─── Results / Testimonials Slider ───────────
 (function () {
   const slider = document.getElementById("resultsSlider");
   if (!slider) return;
@@ -370,7 +361,6 @@
   const next = () => goTo(current + 1);
   const prev = () => goTo(current - 1);
 
-  // Auto advance every 4.5 seconds
   const startAuto = () => {
     clearInterval(autoTimer);
     autoTimer = setInterval(next, 4500);
@@ -381,7 +371,6 @@
     dot.addEventListener("click", () => { goTo(idx); resetAuto(); });
   });
 
-  // Touch / pointer drag
   const track = slider.querySelector(".results-track");
   if (track) {
     let startX = 0, isDragging = false;
@@ -406,12 +395,10 @@
   applyPositions();
   startAuto();
 
-  // Pause on hover
   slider.addEventListener("mouseenter", () => clearInterval(autoTimer));
   slider.addEventListener("mouseleave", startAuto);
 })();
 
-// ─── Testimonial Thumbnail Video Click-to-Play + Volume ──
 (function () {
   const thumbs = document.querySelectorAll(".result-video-thumb");
   if (!thumbs.length) return;
@@ -425,7 +412,6 @@
 
     thumb.style.cursor = "pointer";
 
-    // Volume range control
     if (volBar) {
       volBar.addEventListener("input", (e) => {
         e.stopPropagation();
@@ -438,7 +424,6 @@
       volBar.addEventListener("click", (e) => e.stopPropagation());
     }
 
-    // Mute icon click
     if (volIcon) {
       volIcon.style.cursor = "pointer";
       volIcon.addEventListener("click", (e) => {
@@ -449,7 +434,6 @@
       });
     }
 
-    // Play / pause on thumb click
     thumb.addEventListener("click", () => {
       if (vid.paused) {
         document.querySelectorAll(".result-thumb-video").forEach((v) => { if (v !== vid) v.pause(); });
@@ -472,10 +456,8 @@
   });
 })();
 
-// ── Play / Pause + Volume per card ──
 (function () {
 
-  // Initialize Swiper for Community Slider (Horizontal Stack)
   new Swiper(".communitySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -496,7 +478,6 @@
       dynamicBullets: true,
     },
   });
-
 
   const testimoCards = document.querySelectorAll(".testimo-card");
   testimoCards.forEach((card) => {
@@ -539,7 +520,6 @@
 
     const togglePlay = () => {
       if (vid.paused) {
-        // Pause all other videos
         document.querySelectorAll(".testimo-video").forEach((v) => { if (v !== vid) v.pause(); });
         document.querySelectorAll(".testimo-thumb").forEach((t) => t.classList.remove("is-playing"));
         document.querySelectorAll(".testimo-play-sm i").forEach(i => i.className = "bi bi-play-fill");
@@ -612,6 +592,14 @@
       bottomBar.addEventListener("dblclick", (e) => e.stopPropagation());
     }
 
+    const testimoMenuBtn = card.querySelector(".testimo-menu-btn");
+    if (testimoMenuBtn && bottomBar) {
+      testimoMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        bottomBar.classList.toggle("show-extras");
+      });
+    }
+
     if (playCenter) playCenter.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); togglePlay(); });
     if (playSm) playSm.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); togglePlay(); });
     thumb.addEventListener("click", (e) => { togglePlay(); });
@@ -632,22 +620,18 @@
     const timeLabel = card.querySelector(".vid-time-label");
     if (!vid) return;
 
-    // Format seconds → m:ss
     const fmt = (s) => {
       const m = Math.floor(s / 60);
       const sec = String(Math.floor(s % 60)).padStart(2, "0");
       return `${m}:${sec}`;
     };
 
-    // Time label update
     vid.addEventListener("timeupdate", () => {
       if (timeLabel) timeLabel.textContent = fmt(vid.currentTime);
     });
 
-    // Play / pause toggle
     const togglePlay = () => {
       if (vid.paused) {
-        // Pause all other videos
         document.querySelectorAll(".vid-video").forEach((v) => { if (v !== vid) v.pause(); });
         document.querySelectorAll(".vid-thumb").forEach((t) => t.classList.remove("is-playing"));
         vid.play().catch(() => { });
@@ -663,7 +647,6 @@
 
     vid.addEventListener("ended", () => { thumb.classList.remove("is-playing"); });
 
-    // Volume
     if (volRange) {
       volRange.addEventListener("input", (e) => {
         e.stopPropagation();
@@ -684,4 +667,27 @@
       });
     }
   });
+
+  if (typeof Swiper !== "undefined" && document.querySelector(".testimoSwiper")) {
+    new Swiper(".testimoSwiper", {
+      slidesPerView: 1.15,
+      spaceBetween: 16,
+      centeredSlides: true,
+      breakpoints: {
+        576: { slidesPerView: 2, centeredSlides: false },
+        992: { slidesPerView: 3, centeredSlides: false },
+        1200: { slidesPerView: 3, centeredSlides: false }
+      },
+      centerInsufficientSlides: true,
+      pagination: {
+        el: ".community-indicators",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".testimo-next-btn",
+        prevEl: ".testimo-prev-btn",
+      }
+    });
+  }
+
 })();
