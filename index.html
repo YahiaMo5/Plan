@@ -1158,40 +1158,6 @@
 
   <!-- Custom JS -->
   <script src="script.js"></script>
-
-  <!-- Click-to-copy -->
-  <script>
-    (function () {
-      const toast = document.getElementById('copy-toast');
-      let hideTimer;
-      function showToast(text) {
-        toast.textContent = '\u2713 ' + text + ' تم نسخه';
-        toast.classList.add('show');
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => toast.classList.remove('show'), 2000);
-      }
-      document.querySelectorAll('.copyable').forEach(function (el) {
-        el.addEventListener('click', function () {
-          const num = el.dataset.copy;
-          if (!num) return;
-          navigator.clipboard.writeText(num).then(function () {
-            showToast(num);
-            const icon = el.querySelector('.copy-icon');
-            if (icon) {
-              icon.className = 'bi bi-check-lg copy-icon';
-              setTimeout(() => { icon.className = 'bi bi-copy copy-icon'; }, 2000);
-            }
-          }).catch(function () {
-            const ta = document.createElement('textarea');
-            ta.value = num; ta.style.position = 'fixed'; ta.style.opacity = '0';
-            document.body.appendChild(ta); ta.select();
-            document.execCommand('copy'); document.body.removeChild(ta);
-            showToast(num);
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 
 </html>
