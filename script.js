@@ -16,12 +16,15 @@
 // Bottom sticky CTA show/hide on scroll
 (function () {
   const stickyBar = document.getElementById("bottomStickyCta");
+  const paymentSection = document.getElementById("payment");
   if (!stickyBar) return;
 
   const SHOW_AFTER = 260;
 
   const onScroll = () => {
-    const shouldShow = window.scrollY > SHOW_AFTER;
+    const reachedPayment =
+      paymentSection && window.scrollY >= paymentSection.offsetTop - 120;
+    const shouldShow = window.scrollY > SHOW_AFTER && !reachedPayment;
     stickyBar.classList.toggle("is-visible", shouldShow);
     stickyBar.setAttribute("aria-hidden", shouldShow ? "false" : "true");
   };
