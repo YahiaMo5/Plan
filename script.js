@@ -13,6 +13,23 @@
   onScroll();
 })();
 
+// Bottom sticky CTA show/hide on scroll
+(function () {
+  const stickyBar = document.getElementById("bottomStickyCta");
+  if (!stickyBar) return;
+
+  const SHOW_AFTER = 260;
+
+  const onScroll = () => {
+    const shouldShow = window.scrollY > SHOW_AFTER;
+    stickyBar.classList.toggle("is-visible", shouldShow);
+    stickyBar.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
 // ─── Active nav link on scroll ──────────────
 (function () {
   const sections = document.querySelectorAll("section[id]");

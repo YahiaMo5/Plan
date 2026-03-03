@@ -1905,6 +1905,82 @@ body::after {
 }
 
 /* ========================================
+   AZM - Bottom Sticky CTA
+======================================== */
+.bottom-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  z-index: 1090;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%);
+  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+  pointer-events: none;
+}
+
+.bottom-sticky-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.bottom-sticky-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.96);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-sticky-copy {
+  text-align: right;
+}
+
+.bottom-sticky-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--accent-gold);
+}
+
+.bottom-sticky-sub {
+  margin-top: 0.15rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.bottom-sticky-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.72rem 1.8rem;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  color: #000;
+  background: linear-gradient(135deg, #d7b445 0%, #f0cf5f 100%);
+  border: 1px solid rgba(240, 207, 95, 0.5);
+  box-shadow: 0 6px 20px rgba(215, 180, 69, 0.45);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bottom-sticky-btn:hover {
+  color: #000;
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+/* ========================================
    AZM — Skills / Tags Bar
 ======================================== */
 .skills-bar {
@@ -2435,6 +2511,29 @@ body::after {
   .top-bar {
     font-size: 0.75rem;
     padding: 0.4rem 0.5rem;
+  }
+
+  .bottom-sticky-cta {
+    bottom: 8px;
+  }
+
+  .bottom-sticky-cta-inner {
+    border-radius: 18px;
+    padding: 0.75rem;
+    gap: 0.7rem;
+  }
+
+  .bottom-sticky-title {
+    font-size: 1.05rem;
+  }
+
+  .bottom-sticky-sub {
+    font-size: 0.75rem;
+  }
+
+  .bottom-sticky-btn {
+    font-size: 0.95rem;
+    padding: 0.58rem 1rem;
   }
 
   .curr-btn {
